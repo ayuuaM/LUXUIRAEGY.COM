@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Store</title>
+<style>
+  :root{
+    --bg:#f2f0ec; --ink:#16140f; --muted:#6d685e; --line:#d9d5cc; --accent:#16140f;
+    --font: "Helvetica Neue", Arial, system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#14130f; --ink:#f2f0ec; --muted:#9b958a; --line:#2c2a24; --accent:#f2f0ec;}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.4}
+  header{padding:28px 20px 12px;max-width:1200px;margin:auto}
+  h1{margin:0;font-size:clamp(28px,6vw,48px);letter-spacing:-.02em;font-weight:700}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+  .filters button{font:inherit;font-size:14px;padding:8px 14px;border:1px solid var(--line);background:none;color:var(--ink);border-radius:999px;cursor:pointer}
+  .filters button[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+  main{max-width:1200px;margin:auto;padding:12px 20px 60px;display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+  .card{background:none;border:0;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer}
+  .card .ph{aspect-ratio:3/4;overflow:hidden;background:var(--line)}
+  .card img{width:100%;height:100%;object-fit:cover;display:block}
+  .card:hover img{transform:scale(1.03)} .card img{transition:transform .3s}
+  .card h2{font-size:16px;margin:10px 0 2px;font-weight:600}
+  .meta{color:var(--muted);font-size:14px}
+  .price{font-weight:700;margin-top:4px}
+  dialog{border:0;padding:0;max-width:900px;width:calc(100% - 24px);background:var(--bg);color:var(--ink)}
+  dialog::backdrop{background:rgba(0,0,0,.7)}
+  .dlg{display:grid;grid-template-columns:1.2fr 1fr}
+  .main-img{aspect-ratio:3/4;background:var(--line)} .main-img img{width:100%;height:100%;object-fit:contain}
+  .info{padding:20px;display:flex;flex-direction:column;gap:6px}
+  .thumbs{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+  .thumbs button{width:56px;height:72px;padding:0;border:2px solid transparent;background:none;cursor:pointer}
+  .thumbs button[aria-current="true"]{border-color:var(--accent)}
+  .thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+  .close{align-self:flex-end;font:inherit;background:none;border:1px solid var(--line);color:var(--ink);padding:6px 12px;cursor:pointer}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  @media(max-width:640px){.dlg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Store</h1>
+  <div class="filters" id="filters"></div>
+</header>
+<main id="grid"></main>
+
+<dialog id="dlg" aria-label="Product details">
+  <div class="dlg">
+    <div class="main-img"><img id="big" alt=""></div>
+    <div class="info">
+      <button class="close" id="close">Close</button>
+      <h2 id="d-name" style="margin:8px 0 0"></h2>
+      <div class="meta" id="d-meta"></div>
+      <div class="price" id="d-price"></div>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="products.js"></script>
+<script>
+  const { currency, products } = window.STORE;
+  const money = n => n.toLocaleString("en-US") + " " + currency;
+  const meta = p => [p.brand, "Size " + p.size, p.madeInItaly ? "Made in Italy" : null].filter(Boolean).join(", ");
+  const grid = document.getElementById("grid"), filters = document.getElementById("filters");
+  const dlg = document.getElementById("dlg");
+
+  function render(cat){
+    grid.innerHTML = "";
+    products.filter(p => cat === "all" || p.category === cat).forEach(p => {
+      const b = document.createElement("button");
+      b.className = "card";
+      b.innerHTML = `<div class="ph"><img loading="lazy" src="${p.images[0]}" alt="${p.name}"></div>
+        <h2>${p.name}</h2><div class="meta">${meta(p)}</div><div class="price">${money(p.price)}</div>`;
+      b.onclick = () => openProduct(p);
+      grid.appendChild(b);
+    });
+  }
+
+  const cats = ["all", ...new Set(products.map(p => p.category))];
+  const labels = {all:"All", shoes:"Shoes", jackets:"Jackets", tshirts:"T-shirts"};
+  cats.forEach((c, i) => {
+    const b = document.createElement("button");
+    b.textContent = labels[c] || c;
+    b.setAttribute("aria-pressed", i === 0);
+    b.onclick = () => {
+      [...filters.children].forEach(x => x.setAttribute("aria-pressed", x === b));
+      render(c);
+    };
+    filters.appendChild(b);
+  });
+
+  function openProduct(p){
+    const big = document.getElementById("big"), th = document.getElementById("thumbs");
+    document.getElementById("d-name").textContent = p.name;
+    document.getElementById("d-meta").textContent = meta(p) + (p.note_ar ? " | " + p.note_ar : "");
+    document.getElementById("d-price").textContent = money(p.price);
+    th.innerHTML = "";
+    const show = (src, btn) => {
+      big.src = src; big.alt = p.name;
+      [...th.children].forEach(x => x.setAttribute("aria-current", x === btn));
+    };
+    p.images.forEach((src, i) => {
+      const b = document.createElement("button");
+      b.innerHTML = `<img src="${src}" alt="Photo ${i + 1} of ${p.name}">`;
+      b.onclick = () => show(src, b);
+      th.appendChild(b);
+    });
+    show(p.images[0], th.children[0]);
+    dlg.showModal();
+  }
+  document.getElementById("close").onclick = () => dlg.close();
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+  render("all");
+</script>
+</body>
+</html>
