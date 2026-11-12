@@ -1,0 +1,207 @@
+// https://github.com/SmartJSONEditor/PublicDocuments/wiki/ValueTransformers
+var ValueTransformer = function () {
+    
+    this.displayName = "Transform value";
+    this.shortDescription = "My value transformer"
+    this.transform = function (inputValue, jsonValue, arrayIndex, parameters, info) {
+        return inputValue;
+    };
+}
+
+function sjeClass() {
+    return new ValueTransformer();
+}AYA Mahmoud:
+	STORE = {
+  "currency": "EGP",
+  "products": [
+    {
+      "id": "dolce-gabbana-loafers",
+      "name": "Dolce & Gabbana Loafers",
+      "brand": "Dolce & Gabbana",
+      "category": "shoes",
+      "size": "44",
+      "price": 9500,
+      "madeInItaly": true,
+      "images": [
+        "images/dolce-gabbana-loafers/1.jpg",
+        "images/dolce-gabbana-loafers/2.jpg",
+        "images/dolce-gabbana-loafers/3.jpg"
+      ]
+    },
+    {
+      "id": "gucci-shoes",
+      "name": "Gucci Shoes",
+      "brand": "Gucci",
+      "category": "shoes",
+      "size": "45",
+      "price": 30000,
+      "madeInItaly": true,
+      "images": [
+        "images/gucci-shoes/1.jpg",
+        "images/gucci-shoes/2.jpg",
+        "images/gucci-shoes/3.jpg"
+      ]
+    },
+    {
+      "id": "diesel-jacket-gold",
+      "name": "Diesel Jacket (Gold)",
+      "brand": "Diesel",
+      "category": "jackets",
+      "size": "L",
+      "price": 9000,
+      "madeInItaly": false,
+      "images": [
+        "images/diesel-jacket-gold/1.jpg",
+        "images/diesel-jacket-gold/2.jpg"
+      ]
+    },
+    {
+      "id": "diesel-jacket-navy",
+      "name": "Diesel Jacket (Navy)",
+      "brand": "Diesel",
+      "category": "jackets",
+      "size": "L",
+      "price": 8000,
+      "madeInItaly": false,
+      "images": [
+        "images/diesel-jacket-navy/1.jpg",
+        "images/diesel-jacket-navy/2.jpg"
+      ],
+      "note_ar": "الحشو ريش نعام"
+    },
+    {
+      "id": "fendi-tshirt",
+      "name": "Fendi T-shirt",
+      "brand": "Fendi",
+      "category": "tshirts",
+      "size": "L",
+      "price": 9500,
+      "madeInItaly": true,
+      "images": [
+        "images/fendi-tshirt/1.jpg",
+        "images/fendi-tshirt/2.jpg",
+        "images/fendi-tshirt/3.jpg",
+        "images/fendi-tshirt/4.jpg"
+      ]
+    },
+    {
+      "id": "versace-half-boot",
+      "name": "Versace Half Boot (Real Leather)",
+      "brand": "Versace",
+      "category": "shoes",
+      "size": "44",
+      "price": 15000,
+      "madeInItaly": true,
+      "images": [
+        "images/versace-half-boot/1.jpg",
+        "images/versace-half-boot/2.jpg",
+        "images/versace-half-boot/3.jpg",
+        "images/versace-half-boot/4.jpg"
+      ]
+    },
+    {
+      "id": "dior-tshirt",
+      "name": "Dior T-shirt",
+      "brand": "Dior",
+      "category": "tshirts",
+      "size": "L",
+      "price": 15000,
+      "madeInItaly": true,
+      "images": [
+        "images/dior-tshirt/1.jpg",
+        "images/dior-tshirt/2.jpg",
+        "images/dior-tshirt/3.jpg"
+      ]
+    },
+    {
+      "id": "versace-blazer",
+      "name": "Versace Collection Blazer",
+      "brand": "Versace",
+      "category": "jackets",
+      "size": "50",
+      "price": 36500,
+      "madeInItaly": true,
+      "images": [
+        "images/versace-blazer/1.jpg",
+        "images/versace-blazer/2.jpg",
+        "images/versace-blazer/3.jpg",
+        "images/versace-blazer/4.jpg"
+      ]
+    },
+    {
+      "id": "emporio-armani-loafers",
+      "name": "Emporio Armani Loafers",
+      "brand": "Emporio Armani",
+      "category": "shoes",
+      "size": "44",
+      "price": 9500,
+      "madeInItaly": false,
+      "images": [
+        "images/emporio-armani-loafers/1.jpg",
+        "images/emporio-armani-loafers/2.jpg",
+        "images/emporio-armani-loafers/3.jpg",
+        "images/emporio-armani-loafers/4.jpg",
+        "images/emporio-armani-loafers/5.jpg"
+      ]
+    },
+    {
+      "id": "balenciaga-track",
+      "name": "Balenciaga Track",
+      "brand": "Balenciaga",
+      "category": "shoes",
+      "size": "43",
+      "price": 7500,
+      "madeInItaly": false,
+      "images": [
+        "images/balenciaga-track/1.jpg",
+        "images/balenciaga-track/2.jpg",
+        "images/balenciaga-track/3.jpg",
+        "images/balenciaga-track/4.jpg",
+        "images/balenciaga-track/5.jpg",
+        "images/balenciaga-track/6.jpg"
+      ]
+    }
+  ]
+};
+
+AYA Mahmoud:
+	file:///Users/ayamahmoud/Downloads/store-products/index.html
+
+AYA Mahmoud:
+	file:///Users/ayamahmoud/Downloads/store-products/index.html
+	ذ
+
+AYA Mahmoud:
+	ذ
+
+AYA Mahmoud:
+	PROMPT
+getlayers.ai/layer/lumea
+"You are an expert creative front-end developer. Produce a
+**single self-contained 'index.html**
+that reproduces the project below **exactly** - same layout,
++637 LINES - COPY THE FULL PROMPT ›
+
+AYA Mahmoud:
+	PROMPT
+getlayers.ai/layer/lumea
+"You are an expert creative front-end developer. Produce a
+**single self-contained 'index.html**
+that reproduces the project below **exactly** - same layout,
++637 LINES - COPY THE FULL PROMPT ›
+
+HTML Snippets  v0.2.1 
+div --> <div></div>
+doc --> <!DOCTYPE html>
+a   --> <a href=""></a>
+ Make extension work in languages other than HTML
+ Windows %USERPROFILE%\.vscode\extensions
+Mac ~/.vscode/extensions
+Linux ~/.vscode/extensions
+Windows %USERPROFILE%\.vscode\ luxuiraegy.com
+Mac ~/.vscode/luxuiraegy.com
+Linux ~/.vscode/luxuiraegy.com
+abusaidm.html-snippets-x.x.x
+www.luxuiraegy.com
+https://abusaidm.gallerycdn.vsassets.io/extensions/abusaidm/html-snippets/0.2.1/1514476281055/Microsoft.VisualStudio.Services.Icons.Default
+added php, js, and jsreact as languages where the snippets work by default.
