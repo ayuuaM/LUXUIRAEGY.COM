@@ -131,7 +131,7 @@
       ? ["الدفع عند الاستلام", "توصيل لكل المحافظات", "كل قطعة بمقاس واحد", "قطع ماركات مختارة"]
       : ["Cash on delivery", "All governorates", "One size per piece", "Curated designer pieces"];
     var group = items.map(function (s) { return "<span>" + s + " <i>✦</i></span>"; }).join("");
-    $("stripIn").innerHTML = group + group + group + group;
+    $("stripIn").innerHTML = group;
   }
 
   /* ── filters + grid ── */
