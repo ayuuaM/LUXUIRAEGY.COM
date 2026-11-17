@@ -67,8 +67,8 @@
   function $(id) { return document.getElementById(id); }
 
   /* ── state ── */
-  var lang = "ar";
-  try { lang = localStorage.getItem("luxuira-lang") === "en" ? "en" : "ar"; } catch (e) {}
+  var lang = "en";
+  try { lang = localStorage.getItem("luxuira-lang") === "ar" ? "ar" : "en"; } catch (e) {}
 
   var cart = [];
   try {
@@ -112,6 +112,7 @@
     btn.textContent = lang === "ar" ? "EN" : "ع";
     btn.setAttribute("aria-label", lang === "ar" ? "Switch to English" : "التبديل إلى العربية");
     $("cartBtn").setAttribute("aria-label", lang === "ar" ? "افتح الطلب" : "Open your order");
+    $("drawer").setAttribute("aria-label", lang === "ar" ? "الطلب" : "Your order");
     document.querySelector(".btn-arrow").textContent = lang === "ar" ? "←" : "→";
     $("year").textContent = T[lang].year;
 
