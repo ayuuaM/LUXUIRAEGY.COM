@@ -10,9 +10,9 @@
       "price": 9500,
       "madeInItaly": true,
       "images": [
-        "images/dolce-gabbana-loafers/1.jpg",
-        "images/dolce-gabbana-loafers/2.jpg",
-        "images/dolce-gabbana-loafers/3.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dolce-gabbana-loafers/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dolce-gabbana-loafers/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dolce-gabbana-loafers/3.jpg"
       ]
     },
     {
@@ -24,9 +24,9 @@
       "price": 30000,
       "madeInItaly": true,
       "images": [
-        "images/gucci-shoes/1.jpg",
-        "images/gucci-shoes/2.jpg",
-        "images/gucci-shoes/3.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/gucci-shoes/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/gucci-shoes/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/gucci-shoes/3.jpg"
       ]
     },
     {
@@ -38,8 +38,8 @@
       "price": 9000,
       "madeInItaly": false,
       "images": [
-        "images/diesel-jacket-gold/1.jpg",
-        "images/diesel-jacket-gold/2.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/diesel-jacket-gold/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/diesel-jacket-gold/2.jpg"
       ]
     },
     {
@@ -51,10 +51,11 @@
       "price": 8000,
       "madeInItaly": false,
       "images": [
-        "images/diesel-jacket-navy/1.jpg",
-        "images/diesel-jacket-navy/2.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/diesel-jacket-navy/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/diesel-jacket-navy/2.jpg"
       ],
-      "note_ar": "الحشو ريش نعام"
+      "note_ar": "الحشو ريش نعام",
+      "note_en": "Ostrich-feather filling"
     },
     {
       "id": "fendi-tshirt",
@@ -65,10 +66,10 @@
       "price": 9500,
       "madeInItaly": true,
       "images": [
-        "images/fendi-tshirt/1.jpg",
-        "images/fendi-tshirt/2.jpg",
-        "images/fendi-tshirt/3.jpg",
-        "images/fendi-tshirt/4.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/fendi-tshirt/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/fendi-tshirt/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/fendi-tshirt/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/fendi-tshirt/4.jpg"
       ]
     },
     {
@@ -80,10 +81,10 @@
       "price": 15000,
       "madeInItaly": true,
       "images": [
-        "images/versace-half-boot/1.jpg",
-        "images/versace-half-boot/2.jpg",
-        "images/versace-half-boot/3.jpg",
-        "images/versace-half-boot/4.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-half-boot/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-half-boot/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-half-boot/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-half-boot/4.jpg"
       ]
     },
     {
@@ -95,9 +96,9 @@
       "price": 15000,
       "madeInItaly": true,
       "images": [
-        "images/dior-tshirt/1.jpg",
-        "images/dior-tshirt/2.jpg",
-        "images/dior-tshirt/3.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dior-tshirt/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dior-tshirt/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dior-tshirt/3.jpg"
       ]
     },
     {
@@ -109,10 +110,10 @@
       "price": 36500,
       "madeInItaly": true,
       "images": [
-        "images/versace-blazer/1.jpg",
-        "images/versace-blazer/2.jpg",
-        "images/versace-blazer/3.jpg",
-        "images/versace-blazer/4.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-blazer/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-blazer/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-blazer/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-blazer/4.jpg"
       ]
     },
     {
@@ -124,11 +125,11 @@
       "price": 9500,
       "madeInItaly": false,
       "images": [
-        "images/emporio-armani-loafers/1.jpg",
-        "images/emporio-armani-loafers/2.jpg",
-        "images/emporio-armani-loafers/3.jpg",
-        "images/emporio-armani-loafers/4.jpg",
-        "images/emporio-armani-loafers/5.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/4.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/5.jpg"
       ]
     },
     {
@@ -140,12 +141,12 @@
       "price": 7500,
       "madeInItaly": false,
       "images": [
-        "images/balenciaga-track/1.jpg",
-        "images/balenciaga-track/2.jpg",
-        "images/balenciaga-track/3.jpg",
-        "images/balenciaga-track/4.jpg",
-        "images/balenciaga-track/5.jpg",
-        "images/balenciaga-track/6.jpg"
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/4.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/5.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/6.jpg"
       ]
     }
   ]
