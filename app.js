@@ -329,6 +329,11 @@
     sel.value = cur;
   }
 
+  function govLabel(v) {
+    var i = GOVS.ar.indexOf(v);
+    return i === -1 ? v : GOVS[lang][i];
+  }
+
   function normalizePhone(v) {
     var n = v.replace(/\D/g, "");
     if (n.indexOf("0020") === 0) n = n.slice(4);
@@ -386,7 +391,7 @@
 
     var name = $("cName").value.trim();
     if (name || $("cGov").value) {
-      var addr = [name, $("cPhone").value.trim(), $("cGov").value, $("cCity").value.trim(), $("cAddr").value.trim()]
+      var addr = [name, $("cPhone").value.trim(), govLabel($("cGov").value), $("cCity").value.trim(), $("cAddr").value.trim()]
         .filter(Boolean).join(" — ");
       html += '<div class="sum-addr"><b>' + t.deliverTo + ":</b> " + esc(addr) + "</div>";
     }
@@ -409,7 +414,7 @@
     lines.push("", t.orderTotal + ": " + fmt(cartTotal()) + " " + t.egp, t.orderPay, "");
     lines.push(t.fName + ": " + $("cName").value.trim());
     lines.push(t.fPhone + ": " + normalizePhone($("cPhone").value));
-    lines.push(t.fGov + ": " + $("cGov").value);
+    lines.push(t.fGov + ": " + govLabel($("cGov").value));
     lines.push(t.fCity + ": " + $("cCity").value.trim());
     lines.push(t.fAddr + ": " + $("cAddr").value.trim());
     var note = $("cNote").value.trim();
