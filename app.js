@@ -607,6 +607,24 @@
     onScroll();
   }
 
+  /* ── film ── */
+  function initFilm() {
+    var film = window.STORE && window.STORE.film;
+    if (!film || !film.src) return;
+    var v = $("filmVideo");
+    if (film.poster) v.poster = film.poster;
+    v.src = film.src;
+    $("film").hidden = false;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) { v.controls = true; return; }
+    if (!("IntersectionObserver" in window)) { v.play().catch(function () {}); return; }
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) v.play().catch(function () {}); else v.pause();
+      });
+    }, { threshold: 0.25 }).observe(v);
+  }
+
   /* ── boot ── */
   $("drawer").inert = true;
   $("lb").inert = true;
@@ -614,6 +632,7 @@
     el.classList.add("reveal");
   });
   wire();
+  initFilm();
   applyLang(lang);
   initReveal();
 })();

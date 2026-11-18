@@ -1,5 +1,6 @@
 window.STORE = {
   "currency": "EGP",
+  "film": { "src": "", "poster": "" },
   "products": [
     {
       "id": "dolce-gabbana-loafers",

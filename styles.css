@@ -167,6 +167,11 @@ html[lang="en"] .hero-txt h1{font-weight:500}
 
 /* ── sections ── */
 section{scroll-margin-top:calc(var(--head-h) + 16px)}
+.film{padding-block:96px 0}
+.film video{
+  display:block;width:100%;aspect-ratio:16/9;object-fit:cover;
+  background:var(--bg-3);border-radius:var(--radius);border:1px solid var(--line);
+}
 .products{padding-block:96px}
 .head-row{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
 .head-row h2{font-size:clamp(1.8rem,3.4vw,2.5rem)}
