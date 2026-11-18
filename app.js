@@ -67,8 +67,8 @@
   function $(id) { return document.getElementById(id); }
 
   /* ── state ── */
-  var lang = "ar";
-  try { lang = localStorage.getItem("luxuira-lang") === "en" ? "en" : "ar"; } catch (e) {}
+  var lang = "en";
+  try { lang = localStorage.getItem("luxuira-lang") === "ar" ? "ar" : "en"; } catch (e) {}
 
   var cart = [];
   try {
@@ -112,6 +112,7 @@
     btn.textContent = lang === "ar" ? "EN" : "ع";
     btn.setAttribute("aria-label", lang === "ar" ? "Switch to English" : "التبديل إلى العربية");
     $("cartBtn").setAttribute("aria-label", lang === "ar" ? "افتح الطلب" : "Open your order");
+    $("drawer").setAttribute("aria-label", lang === "ar" ? "الطلب" : "Your order");
     document.querySelector(".btn-arrow").textContent = lang === "ar" ? "←" : "→";
     $("year").textContent = T[lang].year;
 
@@ -130,7 +131,7 @@
       ? ["الدفع عند الاستلام", "توصيل لكل المحافظات", "كل قطعة بمقاس واحد", "قطع ماركات مختارة"]
       : ["Cash on delivery", "All governorates", "One size per piece", "Curated designer pieces"];
     var group = items.map(function (s) { return "<span>" + s + " <i>✦</i></span>"; }).join("");
-    $("stripIn").innerHTML = group + group + group + group;
+    $("stripIn").innerHTML = group;
   }
 
   /* ── filters + grid ── */
@@ -329,6 +330,11 @@
     sel.value = cur;
   }
 
+  function govLabel(v) {
+    var i = GOVS.ar.indexOf(v);
+    return i === -1 ? v : GOVS[lang][i];
+  }
+
   function normalizePhone(v) {
     var n = v.replace(/\D/g, "");
     if (n.indexOf("0020") === 0) n = n.slice(4);
@@ -386,7 +392,7 @@
 
     var name = $("cName").value.trim();
     if (name || $("cGov").value) {
-      var addr = [name, $("cPhone").value.trim(), $("cGov").value, $("cCity").value.trim(), $("cAddr").value.trim()]
+      var addr = [name, $("cPhone").value.trim(), govLabel($("cGov").value), $("cCity").value.trim(), $("cAddr").value.trim()]
         .filter(Boolean).join(" — ");
       html += '<div class="sum-addr"><b>' + t.deliverTo + ":</b> " + esc(addr) + "</div>";
     }
@@ -409,7 +415,7 @@
     lines.push("", t.orderTotal + ": " + fmt(cartTotal()) + " " + t.egp, t.orderPay, "");
     lines.push(t.fName + ": " + $("cName").value.trim());
     lines.push(t.fPhone + ": " + normalizePhone($("cPhone").value));
-    lines.push(t.fGov + ": " + $("cGov").value);
+    lines.push(t.fGov + ": " + govLabel($("cGov").value));
     lines.push(t.fCity + ": " + $("cCity").value.trim());
     lines.push(t.fAddr + ": " + $("cAddr").value.trim());
     var note = $("cNote").value.trim();
@@ -601,6 +607,24 @@
     onScroll();
   }
 
+  /* ── film ── */
+  function initFilm() {
+    var film = window.STORE && window.STORE.film;
+    if (!film || !film.src) return;
+    var v = $("filmVideo");
+    if (film.poster) v.poster = film.poster;
+    v.src = film.src;
+    $("film").hidden = false;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) { v.controls = true; return; }
+    if (!("IntersectionObserver" in window)) { v.play().catch(function () {}); return; }
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) v.play().catch(function () {}); else v.pause();
+      });
+    }, { threshold: 0.25 }).observe(v);
+  }
+
   /* ── boot ── */
   $("drawer").inert = true;
   $("lb").inert = true;
@@ -608,6 +632,7 @@
     el.classList.add("reveal");
   });
   wire();
+  initFilm();
   applyLang(lang);
   initReveal();
 })();

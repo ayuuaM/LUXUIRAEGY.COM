@@ -1,0 +1,154 @@
+window.STORE = {
+  "currency": "EGP",
+  "film": { "src": "", "poster": "" },
+  "products": [
+    {
+      "id": "dolce-gabbana-loafers",
+      "name": "Dolce & Gabbana Loafers",
+      "brand": "Dolce & Gabbana",
+      "category": "shoes",
+      "size": "44",
+      "price": 9500,
+      "madeInItaly": true,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dolce-gabbana-loafers/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dolce-gabbana-loafers/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dolce-gabbana-loafers/3.jpg"
+      ]
+    },
+    {
+      "id": "gucci-shoes",
+      "name": "Gucci Shoes",
+      "brand": "Gucci",
+      "category": "shoes",
+      "size": "45",
+      "price": 30000,
+      "madeInItaly": true,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/gucci-shoes/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/gucci-shoes/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/gucci-shoes/3.jpg"
+      ]
+    },
+    {
+      "id": "diesel-jacket-gold",
+      "name": "Diesel Jacket (Gold)",
+      "brand": "Diesel",
+      "category": "jackets",
+      "size": "L",
+      "price": 9000,
+      "madeInItaly": false,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/diesel-jacket-gold/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/diesel-jacket-gold/2.jpg"
+      ]
+    },
+    {
+      "id": "diesel-jacket-navy",
+      "name": "Diesel Jacket (Navy)",
+      "brand": "Diesel",
+      "category": "jackets",
+      "size": "L",
+      "price": 8000,
+      "madeInItaly": false,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/diesel-jacket-navy/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/diesel-jacket-navy/2.jpg"
+      ],
+      "note_ar": "الحشو ريش نعام",
+      "note_en": "Ostrich-feather filling"
+    },
+    {
+      "id": "fendi-tshirt",
+      "name": "Fendi T-shirt",
+      "brand": "Fendi",
+      "category": "tshirts",
+      "size": "L",
+      "price": 9500,
+      "madeInItaly": true,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/fendi-tshirt/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/fendi-tshirt/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/fendi-tshirt/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/fendi-tshirt/4.jpg"
+      ]
+    },
+    {
+      "id": "versace-half-boot",
+      "name": "Versace Half Boot (Real Leather)",
+      "brand": "Versace",
+      "category": "shoes",
+      "size": "44",
+      "price": 15000,
+      "madeInItaly": true,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-half-boot/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-half-boot/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-half-boot/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-half-boot/4.jpg"
+      ]
+    },
+    {
+      "id": "dior-tshirt",
+      "name": "Dior T-shirt",
+      "brand": "Dior",
+      "category": "tshirts",
+      "size": "L",
+      "price": 15000,
+      "madeInItaly": true,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dior-tshirt/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dior-tshirt/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/dior-tshirt/3.jpg"
+      ]
+    },
+    {
+      "id": "versace-blazer",
+      "name": "Versace Collection Blazer",
+      "brand": "Versace",
+      "category": "jackets",
+      "size": "50",
+      "price": 36500,
+      "madeInItaly": true,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-blazer/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-blazer/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-blazer/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/versace-blazer/4.jpg"
+      ]
+    },
+    {
+      "id": "emporio-armani-loafers",
+      "name": "Emporio Armani Loafers",
+      "brand": "Emporio Armani",
+      "category": "shoes",
+      "size": "44",
+      "price": 9500,
+      "madeInItaly": false,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/4.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/emporio-armani-loafers/5.jpg"
+      ]
+    },
+    {
+      "id": "balenciaga-track",
+      "name": "Balenciaga Track",
+      "brand": "Balenciaga",
+      "category": "shoes",
+      "size": "43",
+      "price": 7500,
+      "madeInItaly": false,
+      "images": [
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/1.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/2.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/3.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/4.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/5.jpg",
+        "https://cdn.jsdelivr.net/gh/ayuuaM/image@main/balenciaga-track/6.jpg"
+      ]
+    }
+  ]
+};
